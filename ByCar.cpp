@@ -42,15 +42,15 @@ void main()
 	Timetable tc;
 	tc.setTimeInfo(c);
 	//cout << c1[2].getId() << endl;
-	//²âÊÔcout<< c.getArrivetime()<< endl;
-	//ÊäÈëexitÍË³ö
-	//µÚÒ»¡¢¶ş´ÎĞèÇó£¬ÊäÈëbyÕ¹ÏÖ   µÚÈı´ÎĞèÇó£¬ÊäÈënewÕ¹Ê¾ÉêÇëĞÂ¿¨£¬ÊäÈëdeleteÕ¹Ê¾×¢Ïú¿¨
-	//cout << "µÚÒ»¡¢¶ş´ÎĞèÇó£¬ÊäÈëbyÕ¹ÏÖ   µÚÈı´ÎĞèÇó£¬ÊäÈënewÕ¹Ê¾ÉêÇëĞÂ¿¨£¬ÊäÈëdeleteÕ¹Ê¾×¢Ïú¿¨" << endl;
+	//æµ‹è¯•cout<< c.getArrivetime()<< endl;
+	//è¾“å…¥exité€€å‡º
+	//ç¬¬ä¸€ã€äºŒæ¬¡éœ€æ±‚ï¼Œè¾“å…¥byå±•ç°   ç¬¬ä¸‰æ¬¡éœ€æ±‚ï¼Œè¾“å…¥newå±•ç¤ºç”³è¯·æ–°å¡ï¼Œè¾“å…¥deleteå±•ç¤ºæ³¨é”€å¡
+	//cout << "ç¬¬ä¸€ã€äºŒæ¬¡éœ€æ±‚ï¼Œè¾“å…¥byå±•ç°   ç¬¬ä¸‰æ¬¡éœ€æ±‚ï¼Œè¾“å…¥newå±•ç¤ºç”³è¯·æ–°å¡ï¼Œè¾“å…¥deleteå±•ç¤ºæ³¨é”€å¡" << endl;
 	cout << "**********************************" << endl;
-	cout << "*          Ò»¿¨Í¨³Ë³µÏµÍ³         *" << endl;
-	cout << "*   ÊäÈëÊäÈëbyÕ¹ÏÖµÚÒ»¡¢¶ş´ÎĞèÇó   *" << endl;
-	cout << "*      ÊäÈëÊäÈënewÉêÇëĞÂ¿¨        *" << endl;
-	cout << "*      ÊäÈëÊäÈëdelete×¢Ïú¿¨       *" << endl;
+	cout << "*          ä¸€å¡é€šä¹˜è½¦ç³»ç»Ÿ         *" << endl;
+	cout << "*   è¾“å…¥è¾“å…¥byå±•ç°ç¬¬ä¸€ã€äºŒæ¬¡éœ€æ±‚   *" << endl;
+	cout << "*      è¾“å…¥è¾“å…¥newç”³è¯·æ–°å¡        *" << endl;
+	cout << "*      è¾“å…¥è¾“å…¥deleteæ³¨é”€å¡       *" << endl;
 	cout << "**********************************" << endl;
 	string  symbol;		
 	do 
@@ -59,10 +59,10 @@ void main()
 
 		if (symbol == "delete")
 		{
-			cout << "ÇëÊäÈëÄúµÄ¿¨ºÅ£º" << endl;
+			cout << "è¯·è¾“å…¥æ‚¨çš„å¡å·ï¼š" << endl;
 			int id;
 			cin >> id;
-			cout << "ÇëÊäÈëÄúµÄ¿¨ÀàĞÍ£¨1-ÀÏÊ¦¿¨¡¢2-Ñ§Éú¿¨¡¢3-ÏŞÖÆ¿¨£©£º" << endl;
+			cout << "è¯·è¾“å…¥æ‚¨çš„å¡ç±»å‹ï¼ˆ1-è€å¸ˆå¡ã€2-å­¦ç”Ÿå¡ã€3-é™åˆ¶å¡ï¼‰ï¼š" << endl;
 			int type;
 			cin >> type;
 			if (type == 1)
@@ -86,7 +86,7 @@ void main()
 		if(symbol == "new")
 		{
 			int type;
-			std::cout << "ÇëÊäÈëÄúÏëÉêÇëµÄ¿¨µÄÀàĞÍ(1-ÀÏÊ¦¿¨¡¢2-Ñ§Éú¿¨¡¢3-ÏŞÖÆ¿¨)£º" << endl;
+			std::cout << "è¯·è¾“å…¥æ‚¨æƒ³ç”³è¯·çš„å¡çš„ç±»å‹(1-è€å¸ˆå¡ã€2-å­¦ç”Ÿå¡ã€3-é™åˆ¶å¡)ï¼š" << endl;
 			cin >> type;
 
 			if(type == 1) 
@@ -114,14 +114,14 @@ void main()
 		if(symbol == "by") 
 		{
 			int id;
-			int flag;			//½ÓÊÜpassagerµÄ·µ»Ø±êÖ¾
+			int flag;			//æ¥å—passagerçš„è¿”å›æ ‡å¿—
 			std::cout << "------------------------" << endl;
 			c.carInfo();
 			if(c.getpeopleNumber() < c.getNumber())
 			{
 				do
 				{
-					std::cout << "ÇëÊäÈëÄúµÄ¿¨ºÅ£º" << endl;
+					std::cout << "è¯·è¾“å…¥æ‚¨çš„å¡å·ï¼š" << endl;
 					cin >> id;
 					if(id>1000 && id<2000)
 					{
@@ -171,7 +171,7 @@ void main()
 					else
 					{
 						std::cout << endl;
-						std::cout << "¸Ã¿¨ÎŞĞ§£¬ÎŞ·¨³Ë³µ£¬ÇëÏÂ³µ¡£" << endl;
+						std::cout << "è¯¥å¡æ— æ•ˆï¼Œæ— æ³•ä¹˜è½¦ï¼Œè¯·ä¸‹è½¦ã€‚" << endl;
 					}
 					std::cout << "------------------------" << endl;
 				}while (id != 0);
@@ -179,42 +179,42 @@ void main()
 			}
 			else 
 			{
-				std::cout << "ÈËÊıÒÑ´ïµ½ºËÔØÈËÊı£¬½ûÖ¹ÉÏ³µ" << endl;
+				std::cout << "äººæ•°å·²è¾¾åˆ°æ ¸è½½äººæ•°ï¼Œç¦æ­¢ä¸Šè½¦" << endl;
 			}
 
 
 
-			string type;				//·Ö±ğ¶ÔÓ¦µ½´ï¡¢Àë¿ª¡¢µ½´ïÄ¿µÄµØ£¬ÓÃÒÔ´¥·¢Ö¸Áî
+			string type;				//åˆ†åˆ«å¯¹åº”åˆ°è¾¾ã€ç¦»å¼€ã€åˆ°è¾¾ç›®çš„åœ°ï¼Œç”¨ä»¥è§¦å‘æŒ‡ä»¤
 			string time;
-			std::cout << "ÇëÕıÈ·ÊäÈëÀàĞÍ£¬µ½´ï-arrive£¬Àë¿ª-leave£¬µ½´ïÄ¿µÄµØ-dest" << endl;
+			std::cout << "è¯·æ­£ç¡®è¾“å…¥ç±»å‹ï¼Œåˆ°è¾¾-arriveï¼Œç¦»å¼€-leaveï¼Œåˆ°è¾¾ç›®çš„åœ°-dest" << endl;
 			do 
 			{
 				cin >> type;
 				if(type == "arrive") {
-					std::cout << "ÊäÈëµ½´ïÊ±¼ä£º" << endl;
+					std::cout << "è¾“å…¥åˆ°è¾¾æ—¶é—´ï¼š" << endl;
 					cin >> time;
 					c.setR_arrivetime(time);
-					std::cout << "Çë¼ÌĞøÊäÈë¡£" << endl;
+					std::cout << "è¯·ç»§ç»­è¾“å…¥ã€‚" << endl;
 				}
 				else if(type == "leave") {
-					std::cout << "ÊäÈëÀë¿ªÊ±¼ä£º" << endl;
+					std::cout << "è¾“å…¥ç¦»å¼€æ—¶é—´ï¼š" << endl;
 					cin >> time;
 					c.setR_leaveTime(time);
 					c.leave();
-					std::cout << "Çë¼ÌĞøÊäÈë¡£" << endl;
+		  			std::cout << "è¯·ç»§ç»­è¾“å…¥ã€‚" << endl;
 				}
 				else if(type == "dest") {
-					std::cout << "ÊäÈëµ½´ïÄ¿µÄµØÊ±¼ä£º" << endl;
+					std::cout << "è¾“å…¥åˆ°è¾¾ç›®çš„åœ°æ—¶é—´ï¼š" << endl;
 					cin >> time;
 					c.setR_desttime(time);
-					std::cout << "Çë¼ÌĞøÊäÈë¡£" << endl;
+					std::cout << "è¯·ç»§ç»­è¾“å…¥ã€‚" << endl;
 				}
 				else if(type == "exit")
 				{
 				}
 				else
 				{
-					std::cout << "ÇëÕıÈ·ÊäÈëÀàĞÍ£¬µ½´ï-arrive£¬Àë¿ª-leave£¬µ½´ïÄ¿µÄµØ-dest" << endl;
+					std::cout << "è¯·æ­£ç¡®è¾“å…¥ç±»å‹ï¼Œåˆ°è¾¾-arriveï¼Œç¦»å¼€-leaveï¼Œåˆ°è¾¾ç›®çš„åœ°-dest" << endl;
 				}
 			} while (type != "exit");
 			c.allInfo();
